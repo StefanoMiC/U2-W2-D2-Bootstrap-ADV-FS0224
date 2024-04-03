@@ -1,0 +1,40 @@
+:root {
+  --main-color: palegreen;
+  --fade-in-delay: 1s;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  font-weight: 600;
+}
+
+.bg-palegreen {
+  background-color: var(--main-color);
+}
+
+[data-bs-theme="dark"] .bg-palegreen {
+  --bs-heading-color: black;
+}
+
+/* .footer-container {
+  --fade-in-delay: 3s;
+} */
+
+footer {
+  --main-color: purple;
+  color: var(--bs-body-color);
+  /* --fade-in-delay: 3s; */
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadein 2s backwards var(--fade-in-delay);
+}
